@@ -12,6 +12,12 @@ trait ApiResponser {
     return response()->json(['data' => $data, 'database' => $system], $code);
 
   }
+  public function successResponseAdmin($data, $code = Response::HTTP_OK){
+
+    $system = 'user';
+    return response()->json(['Admin' => $data, 'database' => $system], $code);
+
+  }
 
   public function errorResponse($message, $code)
   {

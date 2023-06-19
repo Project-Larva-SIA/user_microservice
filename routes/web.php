@@ -6,9 +6,11 @@ $router->get('/', function () use ($router) {
 
 
 $router->get('/users', 'UserController@index');
+$router->get('/user/{userID}', 'UserController@show'); 
 $router->post('/users', 'UserController@addUser');
-$router->get('/users/{userID}', 'UserController@show'); // get user by id
-$router->put('/users/{userID}', 'UserController@updateUser'); // update user record
-$router->delete('/users/{userID}', 'UserController@deleteUser'); // delete record
+$router->put('/users/{userID}', 'UserController@updateUser'); 
+$router->delete('/users/{userID}', 'UserController@deleteUser');
+
+    // User Features
 
 $router->get('/users/search/', 'UserController@searchByName');
